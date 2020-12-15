@@ -6,8 +6,8 @@ Red Blue
 
 ## Piece types
 
-Emmiters
-Reflectors
+- Emmiters
+- Reflectors
 
 Simulturn
 
