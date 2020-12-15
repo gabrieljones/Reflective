@@ -6,7 +6,7 @@
 
 ## protoc
 - NONE
-- RESERVED
+- DEAD
 - RAY_ARRIVE
 - RAY_DEPART
 
