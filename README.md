@@ -39,3 +39,20 @@ Reflectors rotate 1/12th per tap
 After players rotate one of their Reflectors their emitters both fire.
 
 If an emitted ray hits the opposing players emitter that player loses.
+
+## Simplified
+Take turns
+
+On your turn
+
+Choose a single reflector
+
+Tap once to rotate it one click
+
+Tap your emitter to emit a ray
+
+Watch the ray bounce around the field
+
+If it hits an emitter that player loses
+
+End of turn, next players turn
