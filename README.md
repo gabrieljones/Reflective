@@ -47,7 +47,9 @@ On your turn
 
 Choose a single reflector
 
-Tap once to rotate it one click
+Single tap to rotate clockwise one click
+
+Double tap to rotate counter clockwise on click
 
 Tap your emitter to emit a ray
 
@@ -56,3 +58,12 @@ Watch the ray bounce around the field
 If it hits an emitter that player loses
 
 End of turn, next players turn
+
+### Setup
+Blinks start as reflectors
+
+Long press to become emitter
+
+When alone tap emitters to change color
+
+
