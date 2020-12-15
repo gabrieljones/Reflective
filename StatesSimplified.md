@@ -6,12 +6,12 @@
 
 ## protoc
 - NONE
-- DEAD
+- RESERVED
 - RAY_ARRIVE
 - RAY_DEPART
 
 Three bits for ray color
 
 ## vars
-heading 0-5
-enum color R, G, B, C, M, Y
+- heading 0-5
+- enum color R, G, B, C, M, Y
