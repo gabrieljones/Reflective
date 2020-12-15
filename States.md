@@ -7,7 +7,6 @@
 - BLU_REFLECTOR
 - YEL_REFLECTOR
 - GRE_REFLECTOR
-
 - RAY_ENTER
 - RAY_LEAVE
 
@@ -16,7 +15,6 @@
 - RESERVED
 - RAY_ARRIVE
 - RAY_DEPART
-
 
 ## vars
 heading
