@@ -1,4 +1,4 @@
-# Reflective a game for Blinks
+# Reflective - a game for Blinks
 
 Two Players
 
