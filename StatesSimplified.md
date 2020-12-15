@@ -1,6 +1,6 @@
 ## States
-- EMITTER
 - REFLECTOR
+- EMITTER
 - RAY_ENTER
 - RAY_LEAVE
 
