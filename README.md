@@ -55,7 +55,7 @@ Tap your emitter to emit a ray
 
 Watch the ray bounce around the field
 
-If it hits an emitter that player loses
+If it hits an emitter that player loses, emitter becomes reflector
 
 End of turn, next players turn
 
