@@ -1,10 +1,5 @@
 ## States
-- RED_EMITTER
-- GRE_EMITTER
-- BLU_EMITTER
-- YEL_EMITTER
-- VIO_EMITTER
-- ORA_EMITTER
+- EMITTER
 - REFLECTOR
 - RAY_ENTER
 - RAY_LEAVE
@@ -15,5 +10,8 @@
 - RAY_ARRIVE
 - RAY_DEPART
 
+Three bits for ray color
+
 ## vars
-heading
+heading 0-5
+enum color R, G, B, C, M, Y
