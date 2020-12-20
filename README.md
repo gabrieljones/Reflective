@@ -1,24 +1,29 @@
 # Reflective - a game for Blinks
 
-Two Players
-
-Red Blue
+Two to Seven Teams
 
 ## Piece types
 
-- Emmiters
-- Reflectors
+### Mirrors
+- Single click - clockwise
+- Double click - counter clockwise
+- Long press - become Emitter
 
-Simulturn
+Rotate 1/12th per click
 
-Players choose one of their Reflectors to rotate
+### Emmiters
 
-Reflectors rotate 1/12th per tap
+- Alone
+  - Single click - change color
+- Attached
+  - Single click - emit for 2 seconds
+- Long press - become mirror
+
 
     △▽△  ▲▼▲  △▼▲  △▽▲  ▲▽▲  ▲▽△  ▲▼△  △▼△ △▼▲  △▽▲  ▲▽▲  ▲▽△  ▲▼△  △▼△
     ▽△▽  ▼▲▼  ▼▲▽  ▼△▽  ▼△▼  ▽△▼  ▽▲▼  ▽▲▽ ▼▲▽  ▼△▽  ▼△▼  ▽△▼  ▽▲▼  ▽▲▽
 
-## Two types of Reflect
+## Three types of Reflect
 
 - Shallow - reflects to 2nd segment to right or left,  4 segments lit up
 ```
@@ -34,36 +39,13 @@ Reflectors rotate 1/12th per tap
 
   Never reflects backwards
 
-## Resolve
+## Game play
 
-After players rotate one of their Reflectors their emitters both fire.
+Turn
 
-If an emitted ray hits the opposing players emitter that player loses.
-
-## Simplified
-Take turns
-
-On your turn
-
-Choose a single reflector
-
-Single tap to rotate clockwise one click
-
-Double tap to rotate counter clockwise on click
-
-Tap your emitter to emit a ray
-
-Watch the ray bounce around the field
-
-If it hits an emitter that player loses, emitter becomes reflector
-
-End of turn, next players turn
-
-### Setup
-Blinks start as reflectors
-
-Long press to become emitter
-
-When alone tap emitters to change color
-
-
+- Choose mirror
+- Double click or Single click to rotate one step
+- Click own emitter
+- Observe reflected light path
+- If light hits an emitter, the emitter dies
+- End of turn
