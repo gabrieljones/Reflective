@@ -30,7 +30,6 @@ void stateMirror() {
       }
     }
   }
-  outFace = 0;
   
   //temp
 //    if (isValueReceivedOnFaceExpired(3)) state = PLAYER_ATTACHED;
