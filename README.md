@@ -38,6 +38,13 @@ Rotate 1/12th per click
 - None - passes straight through eg 3rd segment left or right aka opposite segment
 
   Never reflects backwards
+  
+## Setup
+
+- Players each choose a blink and detach it from the cluster.
+- Long press the blink so it becomes an emitter.
+- Choose prefered color by single clicking their emitter repeatedly.
+- Reattach the blink to the cluster.
 
 ## Game play
 
@@ -49,3 +56,5 @@ Turn
 - Observe reflected light path
 - If light hits an emitter, the emitter dies
 - End of turn
+
+Play until one team remains.
