@@ -11,6 +11,11 @@ Two to Seven Teams
 
 Rotate 1/12th per click
 
+#### Orientations
+
+    △▽△  ▲▼▲  △▼▲  △▽▲  ▲▽▲  ▲▽△  ▲▼△  △▼△ △▼▲  △▽▲  ▲▽▲  ▲▽△  ▲▼△  △▼△
+    ▽△▽  ▼▲▼  ▼▲▽  ▼△▽  ▼△▼  ▽△▼  ▽▲▼  ▽▲▽ ▼▲▽  ▼△▽  ▼△▼  ▽△▼  ▽▲▼  ▽▲▽
+
 ### Emmiters
 
 - Alone
@@ -18,10 +23,6 @@ Rotate 1/12th per click
 - Attached
   - Single click - emit for 2 seconds
 - Long press - become mirror
-
-
-    △▽△  ▲▼▲  △▼▲  △▽▲  ▲▽▲  ▲▽△  ▲▼△  △▼△ △▼▲  △▽▲  ▲▽▲  ▲▽△  ▲▼△  △▼△
-    ▽△▽  ▼▲▼  ▼▲▽  ▼△▽  ▼△▼  ▽△▼  ▽▲▼  ▽▲▽ ▼▲▽  ▼△▽  ▼△▼  ▽△▼  ▽▲▼  ▽▲▽
 
 ## Three types of Reflect
 
