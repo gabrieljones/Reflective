@@ -1,28 +1,39 @@
 byte heading = 0;
-byte inFace = 0;
 byte color = 0;
-enum State {MIRROR, REFLECT, PLAYER_ATTACHED, PLAYER_ALONE, PLAYER_EMIT};
+enum State {MIRROR, PLAYER_ATTACHED, PLAYER_ALONE, PLAYER_EMIT, PLAYER_DEAD};
 enum Proto {NONE, EMIT};
 Color colors[7] = {RED, BLUE, GREEN, YELLOW, ORANGE, CYAN, MAGENTA};
 State state = MIRROR;
+byte tbl[6 * 6] = {  3,2,1,0,5,4,  4,3,5,1,0,2,  5,4,3,2,1,0,  3,5,4,0,2,1,  1,0,5,4,3,2,  2,4,0,5,1,3};
+Timer timer;
 
 void stateMirror() {
   if (buttonSingleClicked()) heading = (heading + 1 + FACE_COUNT) % FACE_COUNT;
   if (buttonDoubleClicked()) heading = (heading - 1 + FACE_COUNT) % FACE_COUNT;
   if (buttonLongPressed()) state = PLAYER_ATTACHED;
+//  inFace = 0;
+  setColor(OFF);
+  setColorOnFace(WHITE, (heading/2 + 0) % 3);
+  setColorOnFace(WHITE, (heading/2 + 0) % 3 + heading % 2);
+  setColorOnFace(WHITE, (heading/2 + 0) % 3 + 3);
+  setColorOnFace(WHITE, ((heading/2 + 0) % 3 + 3 + heading % 2) % FACE_COUNT);
+  setValueSentOnAllFaces(NONE);
   FOREACH_FACE(f) {
     if (!isValueReceivedOnFaceExpired(f)) {
       switch (getLastValueReceivedOnFace(f)) {
         case EMIT:
-          inFace = f;
-          state = REFLECT;
+          setColorOnFace(YELLOW, f);
+          byte outFace = tbl[heading * 6 + f];
+          setValueSentOnFace(EMIT, outFace);
+          setColorOnFace(YELLOW, outFace);
           break;
       }
     }
   }
+  outFace = 0;
   
   //temp
-    if (isValueReceivedOnFaceExpired(3)) state = PLAYER_ATTACHED;
+//    if (isValueReceivedOnFaceExpired(3)) state = PLAYER_ATTACHED;
 
 //  state = PLAYER_ATTACHED;
 //  startState();
@@ -30,25 +41,28 @@ void stateMirror() {
 }
 
 void displMirror() {
-  setColor(OFF);
-  setColorOnFace(WHITE, (heading/2 + 0) % 3);
-  setColorOnFace(WHITE, (heading/2 + 0) % 3 + heading % 2);
-  setColorOnFace(WHITE, (heading/2 + 0) % 3 + 3);
-  setColorOnFace(WHITE, ((heading/2 + 0) % 3 + 3 + heading % 2) % FACE_COUNT);
-}
-  
-void stateReflect() {
-  stateMirror();
 }
 
-void displReflect() {
-  displMirror();
-  setColorOnFace(YELLOW, inFace);
+void checkDead() {
+  FOREACH_FACE(f) {
+    if (!isValueReceivedOnFaceExpired(f)) {
+      switch (getLastValueReceivedOnFace(f)) {
+        case EMIT:
+          state = PLAYER_DEAD;
+          break;
+      }
+    }
+  }
 }
   
 void statePlayerAttached() {
-  if (buttonSingleClicked()) state = PLAYER_EMIT;
+  setValueSentOnAllFaces(NONE);
+  if (buttonSingleClicked()) {
+    timer.set(2000);
+    state = PLAYER_EMIT;
+  }
   if (buttonLongPressed()) state = MIRROR;
+  checkDead();
   if (isAlone()) {
     state = PLAYER_ALONE;
   }
@@ -69,7 +83,9 @@ void displPlayer() {
 }
   
 void statePlayerEmit() {
+  if(timer.isExpired()) state = PLAYER_ATTACHED;
   setValueSentOnFace(EMIT, 0);
+  checkDead();
 }
 
 void displPlayerEmit() {
@@ -77,10 +93,18 @@ void displPlayerEmit() {
   setColorOnFace(OFF, 0);
 }
 
+void statePlayerDead() {
+  if (buttonSingleClicked()) state = MIRROR;
+}
+
+void displPlayerDead() {
+  setColor(makeColorRGB(64, 64, 64));
+}
+
 void setup() {
   randomize();
   color = random(sizeof(colors)-1);
-  heading = random(5);
+//  heading = random(5);
   //temp
 //  if (random(17) == 0) state = PLAYER_ATTACHED;
 }
@@ -90,10 +114,6 @@ void loop() {
     case MIRROR:
       stateMirror();
       displMirror();
-      break;
-    case REFLECT:
-      stateReflect();
-      displReflect();
       break;
     case PLAYER_ATTACHED:
       statePlayerAttached();
@@ -107,6 +127,9 @@ void loop() {
       statePlayerEmit();
       displPlayerEmit();
       break;
+    case PLAYER_DEAD:
+      statePlayerDead();
+      displPlayerDead();
   }
 }
 
