@@ -11,7 +11,7 @@ Two to Seven Teams
 
 Rotate 1/12th per click
 
-#### Orientations
+Orientations
 
     △▽△  ▲▼▲  △▼▲  △▽▲  ▲▽▲  ▲▽△  ▲▼△  △▼△ △▼▲  △▽▲  ▲▽▲  ▲▽△  ▲▼△  △▼△
     ▽△▽  ▼▲▼  ▼▲▽  ▼△▽  ▼△▼  ▽△▼  ▽▲▼  ▽▲▽ ▼▲▽  ▼△▽  ▼△▼  ▽△▼  ▽▲▼  ▽▲▽
@@ -22,7 +22,7 @@ Rotate 1/12th per click
   - Single click - change color
 - Attached
   - Single click - emit for 2 seconds
-- Long press - become mirror
+- Long press - become Mirror
 
 ## Three types of Reflect
 
