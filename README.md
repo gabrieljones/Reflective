@@ -59,3 +59,16 @@ Turn
 - End of turn
 
 Play until one team remains.
+
+## ToDo
+- make light color match emitter color
+- make emitter immune to own color, ie no friendly fire
+- perpendicular mirror should reverse reflect, ie block light since self immune
+- should mirror display be flipped 90 degrees. Would that be more intuitive?
+
+## Alternative Play: Simulturn
+- first player token rotates to next player
+- take turns choosing and lightly placing finger on a mirror blink without clicking
+- everyone simultaneously single clicks or double clicks their selected mirror blink
+- then immediately clicks their emmiter blink
+- repeat until one team remains
